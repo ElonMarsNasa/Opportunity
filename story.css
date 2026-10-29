@@ -1,0 +1,58 @@
+:root{--bg:#04050d;--deep:#0c1233;--text:#ece8dd;--muted:#a9accb;--mars:#e0603a;--sun:#ffb347;--card:#111741}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Figtree",system-ui,sans-serif;font-size:1.1rem;line-height:1.65;transition:background 1.5s}
+body.dusk{--bg:#010103;--card:#07091a}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.15;margin:0 0 .6em}
+h1{font-size:clamp(2.4rem,7vw,4.5rem);letter-spacing:-.02em}
+h2{font-size:clamp(1.7rem,4.5vw,2.6rem)}
+a{color:var(--sun)}
+:focus-visible{outline:3px solid var(--text);outline-offset:3px}
+button{font:inherit;cursor:pointer}
+
+.progress{position:fixed;top:0;left:0;height:4px;width:0;background:var(--mars);z-index:20}
+.bar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:16px;padding:12px clamp(16px,4vw,40px);background:rgba(4,5,13,.88);backdrop-filter:blur(8px)}
+.home{font-family:"Fraunces",serif;font-weight:700;font-size:1.2rem;color:var(--text);text-decoration:none}
+.sol{margin:0 auto 0 0;color:var(--muted);font-variant-numeric:tabular-nums}
+#mode{padding:8px 18px;border-radius:999px;border:2px solid var(--sun);background:none;color:var(--sun);font-weight:600}
+#mode[aria-pressed="true"]{background:var(--sun);color:#1a0f00}
+
+main{max-width:720px;margin:0 auto;padding:0 clamp(16px,5vw,32px)}
+.hero{min-height:70vh;display:flex;flex-direction:column;justify-content:center}
+.lead{color:var(--muted);font-size:1.25rem;max-width:44ch}
+.chapter{padding:clamp(48px,10vh,96px) 0;border-top:1px solid rgba(255,255,255,.08)}
+.voice{font-family:"Fraunces",Georgia,serif;font-size:1.3rem;line-height:1.6}
+.hint,.part-info,.stop-info,.feedback,.verdict,.score{color:var(--muted)}
+
+.science{margin-top:24px;border-left:4px solid var(--mars);background:var(--card);border-radius:0 8px 8px 0;padding:12px 18px}
+.science summary{cursor:pointer;font-weight:600}
+.science p{margin:10px 0 0}
+
+.parts,.clues,.stops{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+.parts button,.clues button,.stops button,.game button,.quiz-opt{padding:10px 16px;border-radius:10px;border:2px solid rgba(255,255,255,.25);background:var(--card);color:var(--text)}
+.parts button:hover,.clues button:hover,.stops button:hover,.game button:hover,.quiz-opt:hover{border-color:var(--sun)}
+[aria-pressed="true"].tog,.on{border-color:var(--mars)!important;background:#2a1410!important}
+.game{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:16px}
+
+.compare{margin:20px 0}
+.row{display:grid;grid-template-columns:70px 1fr 90px;align-items:center;gap:12px;margin:10px 0}
+.track{position:relative;height:18px;background:rgba(255,255,255,.1);border-radius:9px;overflow:hidden}
+.fill{height:100%;width:0;border-radius:9px;transition:width 1.8s ease}
+.planned{background:var(--muted)}
+.actual{background:var(--mars)}
+.in .fill,.in.fill{width:var(--w)}
+.marathon{margin-top:20px}
+.mark{position:absolute;top:0;bottom:0;width:3px;background:var(--text)}
+
+.finale{padding-bottom:120px}
+.quiz-q{margin:20px 0;padding:0;border:0}
+.quiz-q legend{font-weight:600;margin-bottom:8px}
+.quiz-opt{display:block;width:100%;text-align:left;margin:6px 0}
+.quiz-opt.right{border-color:#5fd38d;background:#10281b}
+.quiz-opt.wrong{border-color:#ff7a7a;background:#2b1212}
+.foot{max-width:720px;margin:0 auto;padding:0 clamp(16px,5vw,32px) 60px;color:var(--muted)}
+.foot summary{cursor:pointer;margin:8px 0}
+dt{font-weight:600;color:var(--text)}
+dd{margin:0 0 8px}
+
+@media (max-width:480px){.row{grid-template-columns:60px 1fr}.row b{grid-column:2}}
