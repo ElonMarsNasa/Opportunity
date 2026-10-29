@@ -80,24 +80,10 @@ h1 {
 
 .start:hover { transform: scale(1.05); background: #f0724a; }
 
-.start:focus-visible,
-.motion:focus-visible {
+.start:focus-visible {
   outline: 3px solid var(--text);
   outline-offset: 4px;
 }
-
-.motion {
-  background: none;
-  border: none;
-  color: var(--muted);
-  font: inherit;
-  font-size: 0.9rem;
-  cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.motion:hover { color: var(--text); }
 
 @keyframes pulse {
   0%   { box-shadow: 0 0 0 0 rgba(224, 96, 58, 0.55); }
@@ -107,7 +93,3 @@ h1 {
 
 /* Page leaves when Start is pressed */
 body.leaving { opacity: 0; transition: opacity 0.6s ease; }
-
-@media (prefers-reduced-motion: reduce) {
-  .start { animation: none; }
-}

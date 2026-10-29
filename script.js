@@ -2,7 +2,6 @@
   const canvas = document.getElementById("space");
   const ctx = canvas.getContext("2d");
   const startLink = document.getElementById("start");
-  const motionBtn = document.getElementById("motion");
 
   // Orbit sizes and speeds are NOT to scale, so everything fits on screen.
   // period = seconds for one lap in this animation.
@@ -19,17 +18,8 @@
   planets.forEach((p, i) => (p.angle = (i * 2.4) % (Math.PI * 2)));
 
   let w, h, dpr, cx, cy, rx, tilt, k, sunR, stars = [];
-  let paused = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let mouse = null;
   let last = performance.now();
-
-  function setPaused(value) {
-    paused = value;
-    motionBtn.textContent = paused ? "Play motion" : "Pause motion";
-    motionBtn.setAttribute("aria-pressed", String(paused));
-  }
-  setPaused(paused);
-  motionBtn.addEventListener("click", () => setPaused(!paused));
 
   function resize() {
     dpr = window.devicePixelRatio || 1;
@@ -153,9 +143,7 @@
     const dt = Math.min((now - last) / 1000, 0.1);
     last = now;
 
-    if (!paused) {
-      for (const p of planets) p.angle += (dt * Math.PI * 2) / p.period;
-    }
+    for (const p of planets) p.angle += (dt * Math.PI * 2) / p.period;
 
     ctx.clearRect(0, 0, w, h);
     drawStars();
