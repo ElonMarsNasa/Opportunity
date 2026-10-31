@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Touchdown: Opportunity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="next.css">
+</head>
+<body>
+  <!-- Shows the picture until the button is pressed, then plays the drive-off clip.
+       Put your picture at images/landing.jpg and your clip at videos/drive-off.mp4 -->
+  <video id="scene" muted playsinline preload="auto" poster="images/landing.jpg" aria-label="Opportunity on its landing platform on Mars. An artist's rendering by NASA/JPL.">
+    <source src="videos/drive-off.mp4" type="video/mp4">
+  </video>
+  <div class="shade"></div>
+
+  <aside class="panel">
+    <h1>Touchdown in Eagle Crater</h1>
+    <p class="voice">I made it! After bouncing across Meridiani Planum in my airbags, I'm resting on my landing platform, ready for my first drive.</p>
+    <dl class="facts">
+      <dt>What I carry</dt><dd>Cameras, a rock grinder, a microscope and chemistry tools</dd>
+      <dt>What powers me</dt><dd>Solar panels, rechargeable batteries and small heaters for freezing nights</dd>
+      <dt>How I move</dt><dd>Six wheels, creeping along at a few centimeters per second</dd>
+    </dl>
+    <button id="go" type="button">Start exploring</button>
+    <p class="status" id="status" aria-live="polite"></p>
+    <a class="skip" href="story.html">Skip to the story</a>
+  </aside>
+  <p class="credit">Image and animation: NASA/JPL</p>
+
+  <script src="next.js"></script>
+</body>
+</html>
