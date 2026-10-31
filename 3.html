@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arrival at Mars: Opportunity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="3.css">
+</head>
+<body>
+  <div class="scene" id="scene">
+    <div class="mars" id="mars" role="img" aria-label="The red planet Mars"></div>
+
+    <div class="capsule" id="capsule">
+      <div class="bob">
+        <svg viewBox="0 0 200 120" role="img" aria-label="Opportunity's capsule, with its heat shield facing Mars">
+          <defs>
+            <linearGradient id="trail" x1="1" x2="0">
+              <stop offset="0" stop-color="#fff3c4"/><stop offset=".4" stop-color="#ffa13a"/><stop offset="1" stop-color="#e0603a" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <polygon class="trail" points="130,60 40,22 -150,60 40,98" fill="url(#trail)"/>
+          <rect x="8" y="34" width="36" height="52" rx="4" fill="#2a3566" stroke="#8d92ad" stroke-width="1"/>
+          <path d="M16 34v52M26 34v52M36 34v52" stroke="#4b5a9c" stroke-width="1.5"/>
+          <path d="M46 46 L124 26 L124 94 L46 74Z" fill="#dcd7ca" stroke="#8d92ad" stroke-width="1"/>
+          <path d="M124 24 Q150 60 124 96Z" fill="#8a4b2d" stroke="#5b2f1b" stroke-width="1"/>
+          <circle class="rover-dot" cx="88" cy="60" r="5"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="flash" id="flash"></div>
+  </div>
+
+  <aside class="panel">
+    <h1>Arrival at Mars</h1>
+    <p class="voice">After more than six months in space, I made it! Look at that red planet. It's even more beautiful than I imagined. In a few minutes I'll hit its thin air at tremendous speed, so my capsule has a heat shield to keep me safe. Then come parachutes, rockets and airbags. Wish me luck!</p>
+    <p class="hint">Ready? Press the button and watch me dive into the Martian sky.</p>
+    <details class="science"><summary>Science: why is Mars red?</summary>
+      <p>Mars is covered in dust and rock that contain iron oxide, which is the same thing as rust. That is why the whole planet looks reddish-orange. Opportunity's trip from the top of the atmosphere to the ground took only about six minutes.</p></details>
+    <button id="enter" type="button">Enter Mars' atmosphere</button>
+    <p class="count" id="count" aria-live="assertive"></p>
+    <a class="skip" href="story.html">Skip to the story</a>
+  </aside>
+
+  <script src="3.js"></script>
+</body>
+</html>
