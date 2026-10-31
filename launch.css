@@ -1,4 +1,4 @@
-:root{--bg:#02030a;--text:#ece8dd;--muted:#a9accb;--mars:#e0603a;--sun:#ffb347;--card:#111741;--rh:clamp(250px,56vh,470px);--ground:64px}
+:root{--bg:#02030a;--text:#ece8dd;--muted:#a9accb;--mars:#e0603a;--sun:#ffb347;--card:#111741;--rh:clamp(340px,80vh,820px);--ground:90px}
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;overflow:hidden;background:var(--bg);color:var(--text);font-family:"Figtree",system-ui,sans-serif;line-height:1.55}
 body{transition:opacity .8s}
@@ -10,13 +10,13 @@ body.leaving{opacity:0}
     radial-gradient(1px 1px at 20px 30px,#fff,transparent) 0 0/180px 140px,
     radial-gradient(1.4px 1.4px at 110px 80px,#cfd8ff,transparent) 0 0/260px 200px,
     linear-gradient(#02030a 30%,#0f1a44 100%)}
-.glow{position:absolute;left:var(--rx,34%);bottom:var(--ground);width:60vmin;height:60vmin;transform:translateX(-50%);
+.glow{position:absolute;left:var(--rx,34%);bottom:var(--ground);width:90vmin;height:90vmin;transform:translateX(-50%);
   background:radial-gradient(circle,rgba(255,244,214,.28),transparent 65%)}
 .ground{position:absolute;left:0;right:0;bottom:0;height:var(--ground);background:linear-gradient(#171b34,#080a17);border-top:3px solid #2a3058}
 
 .rocket{position:absolute;left:var(--rx,34%);bottom:calc(var(--ground) - 4px);height:var(--rh);transform:translateX(-50%);z-index:2}
 .rocket svg{height:100%;width:auto;display:block;overflow:visible}
-.tower{position:absolute;left:var(--rx,34%);bottom:var(--ground);height:calc(var(--rh)*.8);width:34px;margin-left:calc(var(--rh)*-.2 - 50px);
+.tower{position:absolute;left:var(--rx,34%);bottom:var(--ground);height:calc(var(--rh)*.85);width:48px;margin-left:calc(var(--rh)*-.18 - 58px);
   border:2px solid #5b6188;background:repeating-linear-gradient(135deg,transparent 0 10px,#5b6188 10px 12px)}
 .rover-dot{fill:var(--mars);animation:pulse 1.6s ease-in-out infinite}
 @keyframes pulse{50%{fill:#ffd2a8;r:6}}
@@ -48,8 +48,8 @@ h1{font-family:"Fraunces",Georgia,serif;font-size:clamp(1.8rem,3.4vw,2.6rem);lin
 .skip{display:block;text-align:center;color:var(--muted);font-size:.9rem}
 
 @media (max-width:760px){
-  :root{--rx:50%;--rh:clamp(200px,38vh,320px)}
-  .panel{top:12px;transform:none;right:12px;left:12px;width:auto;padding:16px;max-height:52vh;overflow:auto}
+  :root{--rx:50%;--rh:clamp(240px,42vh,420px);--ground:70px}
+  .panel{top:12px;transform:none;right:12px;left:12px;width:auto;padding:16px;max-height:46vh;overflow:auto}
   .voice{font-size:1rem}
   .tower{display:none}
 }
