@@ -9,14 +9,14 @@ body.leaving{opacity:0}
 body.zoom #scene{transform:scale(1.18)}
 .shade{position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent 40%,rgba(20,6,2,.55) 100%)}
 
-.panel{position:fixed;right:clamp(16px,4vw,56px);top:50%;transform:translateY(-50%);width:min(450px,44vw);max-height:92vh;overflow:auto;
-  padding:26px;border-radius:16px;background:rgba(24,8,4,.82);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px)}
-h1{font-family:"Fraunces",Georgia,serif;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.1;margin:0 0 .5em}
-.voice{font-family:"Fraunces",Georgia,serif;font-size:1.05rem;margin:0 0 1em}
-.facts{margin:0 0 1.2em;font-size:.95rem}
+.panel{position:fixed;right:0;top:50%;transform:translateY(-50%);width:min(340px,30vw);min-width:280px;z-index:5;
+  padding:20px 22px;border-radius:16px 0 0 16px;background:rgba(24,8,4,.82);border:1px solid rgba(255,255,255,.18);border-right:0;backdrop-filter:blur(6px)}
+h1{font-family:"Fraunces",Georgia,serif;font-size:clamp(1.3rem,2.2vw,1.7rem);line-height:1.15;margin:0 0 .4em}
+.voice{font-family:"Fraunces",Georgia,serif;font-size:.98rem;margin:0 0 .9em}
+.facts{margin:0 0 1em;font-size:.88rem;line-height:1.45}
 .facts dt{font-weight:600;color:var(--sun)}
 .facts dd{margin:0 0 .6em;color:var(--muted)}
-#go{display:block;width:100%;padding:16px;border:0;border-radius:999px;background:var(--mars);color:#1a0904;font:600 1.2rem "Figtree",sans-serif;cursor:pointer;transition:transform .15s}
+#go{display:block;width:100%;padding:13px;border:0;border-radius:999px;background:var(--mars);color:#1a0904;font:600 1.1rem "Figtree",sans-serif;cursor:pointer;transition:transform .15s}
 #go:hover:not(:disabled){transform:scale(1.03)}
 #go:disabled{opacity:.6;cursor:default}
 .status{min-height:2em;margin:8px 0 0;text-align:center;font:700 1.1rem "Fraunces",serif;color:var(--sun)}
@@ -26,6 +26,6 @@ h1{font-family:"Fraunces",Georgia,serif;font-size:clamp(1.6rem,3vw,2.3rem);line-
 @media (max-width:760px){
   #scene{object-position:50% 30%}
   .shade{background:linear-gradient(transparent 40%,rgba(20,6,2,.7))}
-  .panel{top:auto;bottom:12px;right:12px;left:12px;transform:none;width:auto;max-height:55vh;padding:16px}
+  .panel{top:auto;bottom:0;right:0;left:0;transform:none;width:auto;min-width:0;border-radius:16px 16px 0 0;border-right:1px solid rgba(255,255,255,.18);padding:14px 16px}
   .credit{display:none}
 }
