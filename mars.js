@@ -33,6 +33,6 @@
     await wait(4600);
     document.body.classList.add("leaving");
     await wait(800);
-    window.location.href = "story.html";
+    window.location.href = "next.html";
   });
 })();
