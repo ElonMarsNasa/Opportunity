@@ -29,6 +29,6 @@
     await wait(4600);
     document.body.classList.add("leaving");  // fade out
     await wait(800);
-    window.location.href = "story.html";
+    window.location.href = "mars.html";
   });
 })();
