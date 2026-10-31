@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Launch day: Opportunity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="launch.css">
+</head>
+<body>
+  <div class="scene" id="scene">
+    <div class="glow"></div>
+    <div class="tower" aria-hidden="true"></div>
+
+    <div class="rocket" id="rocket">
+      <svg viewBox="0 0 120 400" role="img" aria-label="A Delta II Heavy rocket on the launch pad, with Opportunity inside the nose cone">
+        <g class="flames" id="flames">
+          <polygon class="flame" points="52,385 68,385 60,480"/>
+          <polygon class="flame" points="22,350 33,350 27.5,415"/>
+          <polygon class="flame" points="35,350 46,350 40.5,415"/>
+          <polygon class="flame" points="74,350 85,350 79.5,415"/>
+          <polygon class="flame" points="87,350 98,350 92.5,415"/>
+        </g>
+        <g fill="#f1efe8" stroke="#8d92ad" stroke-width="0.6">
+          <rect x="21" y="200" width="12" height="150"/><path d="M21 200 Q27 168 33 200Z"/>
+          <rect x="34" y="200" width="13" height="150"/><path d="M34 200 Q40.5 168 47 200Z"/>
+          <rect x="73" y="200" width="13" height="150"/><path d="M73 200 Q79.5 168 86 200Z"/>
+          <rect x="87" y="200" width="12" height="150"/><path d="M87 200 Q93 168 99 200Z"/>
+        </g>
+        <rect x="48" y="130" width="24" height="240" fill="#e4e6ee" stroke="#8d92ad" stroke-width="0.6"/>
+        <rect x="48" y="250" width="24" height="7" fill="#2b3a67"/>
+        <path d="M46 130 L46 70 Q60 2 74 70 L74 130Z" fill="#f7f4ec" stroke="#8d92ad" stroke-width="0.6"/>
+        <circle class="rover-dot" cx="60" cy="88" r="4.5"/>
+        <path d="M52 370 L68 370 L72 386 L48 386Z" fill="#4a4f66"/>
+        <g fill="#4a4f66"><path d="M22 350h11l-2 8H24z"/><path d="M35 350h11l-2 8h-7z"/><path d="M74 350h11l-2 8h-7z"/><path d="M88 350h10l-2 8h-6z"/></g>
+      </svg>
+    </div>
+
+    <div class="smoke" id="smoke" aria-hidden="true"></div>
+    <div class="ground"></div>
+  </div>
+
+  <aside class="panel">
+    <h1>Launch day</h1>
+    <p class="voice">Hi, I'm Opportunity, a robot geologist. I'm tucked inside the nose of a Delta II Heavy rocket at Cape Canaveral, Florida. Tonight, July 7, 2003, we leave Earth for Mars. It's a journey of more than six months, and I can't wait to see it. Will you count down with me?</p>
+    <p class="hint">Look for the glowing dot on the rocket. That's me inside the nose cone.</p>
+    <details class="science"><summary>Science: why a Delta II Heavy?</summary>
+      <p>Opportunity's launch window needed more energy than her twin Spirit's, so she flew on the more powerful Heavy version of the Delta II, which has larger solid boosters strapped to its sides.</p></details>
+    <button id="launch" type="button">Launch!</button>
+    <p class="count" id="count" aria-live="assertive"></p>
+    <a class="skip" href="story.html">Skip to the story</a>
+  </aside>
+
+  <script src="launch.js"></script>
+</body>
+</html>
